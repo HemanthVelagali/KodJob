@@ -1,0 +1,327 @@
+.job-card {
+    transition: transform 0.2s;
+    height: 100%;
+}
+
+.job-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.company-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.badge {
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+#loadingSpinner {
+    margin: 2rem 0;
+}
+
+.apply-btn {
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.apply-btn:hover {
+    background-color: #0b5ed7;
+}
+
+@media (max-width: 768px) {
+    .job-card {
+        margin-bottom: 1rem;
+    }
+}
+
+.company-logo-container {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.company-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.company-logo[src*="ui-avatars.com"] {
+    object-fit: cover;
+    padding: 0;
+}
+
+.company-name {
+    font-weight: 600;
+    color: #333;
+}
+
+.location-name {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.card-title {
+    font-size: 1.1rem;
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+}
+
+.company-logo-fallback {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.card-body {
+    padding: 1.25rem;
+}
+
+.badge {
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.apply-btn {
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+}
+
+.apply-btn:hover {
+    color: white;
+    text-decoration: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    min-height: 100vh;
+    margin: 0;
+    display: block;
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    width: 90%;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.left-section {
+    flex: 1;
+    padding: 40px;
+    background-color: #f8f9fa;
+}
+
+.left-section h1 {
+    color: #4285f4;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.image-container {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.right-section {
+    flex: 1;
+    padding: 40px;
+    background-color: white;
+}
+
+.form-container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.form-container.hidden {
+    display: none;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 0.9em;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #4285f4;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    user-select: none;
+}
+
+.btn-primary, .btn-secondary {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    background-color: #4285f4;
+}
+
+.btn-secondary {
+    background-color: #34a853;
+}
+
+.btn-primary:hover {
+    background-color: #3367d6;
+}
+
+.btn-secondary:hover {
+    background-color: #2d8745;
+}
+
+.switch-form {
+    text-align: center;
+    color: #666;
+}
+
+.switch-form a {
+    color: #4285f4;
+    text-decoration: none;
+}
+
+.switch-form a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-section {
+        padding: 20px;
+    }
+
+    .left-section h1 {
+        font-size: 2em;
+    }
+
+    .image-container {
+        height: 200px;
+    }
+
+    .right-section {
+        padding: 20px;
+    }
+}
+
+.main-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-container {
+    display: flex;
+    max-width: 1200px;
+    width: 90%;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 2rem auto;
+}
+
+.jobs-section {
+    background-color: #f8f9fa;
+    padding: 2rem 0;
+}
+
+.jobs-section.hidden {
+    display: none;
+}
+
+#searchInput {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+    .auth-container {
+        margin: 1rem auto;
+        flex-direction: column;
+    }
+} 

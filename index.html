@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kodnest Jobs</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Login/Signup Section -->
+        <div class="container auth-container">
+            <div class="left-section">
+                <h1>Welcome to Kodnest Jobs</h1>
+                <div class="image-container">
+                    <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-4.0.3" alt="Office Space">
+                </div>
+            </div>
+            
+            <div class="right-section">
+                <div class="form-container" id="loginForm">
+                    <h2>Login</h2>
+                    <p class="subtitle">Enter your credentials to access your account</p>
+                    
+                    <form onsubmit="handleLogin(event)">
+                        <div class="form-group">
+                            <input type="email" id="loginEmail" placeholder="Email*" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" id="loginPassword" placeholder="Password*" required>
+                            <span class="password-toggle" onclick="togglePassword('loginPassword')">👁️</span>
+                        </div>
+                        <button type="submit" class="btn-primary">LOGIN</button>
+                    </form>
+                    
+                    <p class="switch-form">Don't have an account? <a href="#" onclick="toggleForms()">Sign up</a></p>
+                </div>
+
+                <div class="form-container hidden" id="signupForm">
+                    <h2>Signup</h2>
+                    <p class="subtitle">Create your account to start exploring jobs</p>
+                    
+                    <form onsubmit="handleSignup(event)">
+                        <div class="form-group">
+                            <input type="text" id="signupUsername" placeholder="Username*" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" id="signupPassword" placeholder="Password*" required>
+                            <span class="password-toggle" onclick="togglePassword('signupPassword')">👁️</span>
+                        </div>
+                        <div class="form-group">
+                            <input type="date" id="dob" placeholder="Date of Birth*" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="signupEmail" placeholder="Email*" required>
+                        </div>
+                        <button type="submit" class="btn-secondary">SIGNUP</button>
+                    </form>
+                    
+                    <p class="switch-form">Already have an account? <a href="#" onclick="toggleForms()">Sign in</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Jobs Section -->
+        <div class="jobs-section hidden" id="jobsSection">
+            <div class="container py-5">
+                <h1 class="text-center mb-4">Job Openings</h1>
+                <div class="row mb-4">
+                    <div class="col-md-6 mx-auto">
+                        <input type="text" id="searchInput" class="form-control" placeholder="Search jobs...">
+                    </div>
+                </div>
+                <div id="loadingSpinner" class="text-center">
+                    <div class="spinner-border" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+                <div id="jobsContainer" class="row">
+                    <!-- Jobs will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
